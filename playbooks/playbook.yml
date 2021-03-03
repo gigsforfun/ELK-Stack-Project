@@ -1,0 +1,20 @@
+---
+  - name: Installs
+    hosts: webservers
+    become: true
+    tasks:
+
+    - name: Install docker.io
+      apt:
+        name: docker.io
+        state: present
+
+    - name: python3
+      apt:
+        name: python3-pip
+        state: present
+
+    - name: Install docker
+      pip:
+        name: docker
+        state: present
