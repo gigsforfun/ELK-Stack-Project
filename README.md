@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-[Network Diagram](Images/network_diagram.png)
+[Network Diagram](https://github.com/gigsforfun/ELK-Stack-Project/blob/main/Images/network_diagram.png?raw=true)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the filebeat-playbook.yml file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -65,7 +65,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-[Docker output](Images/docker_ps_ouput.png)
+[Docker output](Images/docker_ps_ouput.png?raw=true)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -83,8 +83,8 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the playbook file to /etc/ansible/
 - Update the host file to include the IP addresses of the VM's you want to run the playbooks for.
-- Run the playbook. The installation can by accessing the targeted VM through SSH, run "curl localhost:(port of the service installed)", or http://[your.VM.External.IP]:port, for example: Kibana's installation can be checked by running "curl localhost:5601/app/kibana" from the ELK vm, or by going to a web browser and typing "http://[your.ELK-VM.External.IP]:5601/app/kibana" adding the IP of the ELK machine to the URL. 
+- Run the playbook. The installation can by accessing the targeted VM through SSH, run `curl localhost:(port of the service installed)`, or `http://[your.VM.External.IP]:port`, for example: Kibana's installation can be checked by running `curl localhost:5601/app/kibana` from the ELK vm, or by going to a web browser and typing `http://[your.ELK-VM.External.IP]:5601/app/kibana` adding the IP of the ELK machine to the URL. 
 
-The playbooks and configuration files in this repo can be downloaded by copying the files "raw" format URL and running:
+The playbooks and configuration files in this repo can be downloaded by copying the files `raw` format URL and running:
 curl "URL" > "name of the file"
-curl https://raw.githubusercontent.com/gigsforfun/ELK-Stack-Project/main/config_files/ansible.cfg > ansible.cgf
+`curl https://raw.githubusercontent.com/gigsforfun/ELK-Stack-Project/main/config_files/ansible.cfg > ansible.cgf`
