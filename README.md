@@ -43,13 +43,14 @@ Machines within the network can only be accessed by the jump box through SSH.
 
 A summary of the access policies in place can be found in the table below.
 
-|   Name   |  Publicly Accessible | Allowed IP Address/port |
-|:--------:|:--------------------:|:-----------------------:|
-| Jump Box |          yes         |      Public IP/SSH      |
-|   Web1   |          no          |      Public IP/HTTP     |
-|   Web2   |          no          |      Public IP/HTTP     |
-|   Web3   |          no          |      Public IP/HTTP     |
-|  ELK-VM  |          no          |            -            |
+|      Name     | Publicly Accessible | Allowed IP Address/port |
+|:-------------:|:-------------------:|:-----------------------:|
+|    Jump Box   |         yes         |      Public IP/SSH      |
+| Load balancer |         yes         |      Public IP/HTTP     |
+|      Web1     |          no         |       10.0.0.4/SSH      |
+|      Web2     |          no         |       10.0.0.4/SSH      |
+|      Web3     |          no         |       10.0.0.4/SSH      |
+|     ELK-VM    |          no         |       10.0.0.4/SSH      |
 
 ### Elk Configuration
 
