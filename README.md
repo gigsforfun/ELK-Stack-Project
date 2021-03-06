@@ -43,14 +43,13 @@ Machines within the network can only be accessed by the jump box through SSH.
 
 A summary of the access policies in place can be found in the table below.
 
-|      Name     | Publicly Accessible | Allowed IP Address/port |
-|:-------------:|:-------------------:|:-----------------------:|
-|    Jump Box   |         yes         |      Public IP/SSH      |
-| Load balancer |         yes         |      Public IP/HTTP     |
-|      Web1     |          no         |       10.0.0.4/SSH      |
-|      Web2     |          no         |       10.0.0.4/SSH      |
-|      Web3     |          no         |       10.0.0.4/SSH      |
-|     ELK-VM    |          no         |       10.0.0.4/SSH      |
+|   Name   | Publicly Accessible |    Allowed IP Address/port    |
+|:--------:|:-------------------:|:-----------------------------:|
+| Jump Box |         yes         |         Public IP/SSH         |
+|   Web1   |          no         |          10.0.0.4/SSH         |
+|   Web2   |          no         |          10.0.0.4/SSH         |
+|   Web3   |          no         |          10.0.0.4/SSH         |
+|  ELK-VM  |         yes         | 10.0.0.4/SSH - Public IP/5601 |       |
 
 ### Elk Configuration
 
@@ -87,5 +86,7 @@ SSH into the control node and follow the steps below:
 - Run the playbook. The installation can by accessing the targeted VM through SSH, run `curl localhost:(port of the service installed)`, or `http://[your.VM.External.IP]:port`, for example: Kibana's installation can be checked by running `curl localhost:5601/app/kibana` from the ELK vm, or by going to a web browser and typing `http://[your.ELK-VM.External.IP]:5601/app/kibana` adding the IP of the ELK machine to the URL. 
 
 The playbooks and configuration files in this repo can be downloaded by copying the files `raw` format URL and running:
+
 curl "URL" > "name of the file"
+
 `curl https://raw.githubusercontent.com/gigsforfun/ELK-Stack-Project/main/config_files/ansible.cfg > ansible.cgf`
