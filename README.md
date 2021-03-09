@@ -86,7 +86,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the playbook file to /etc/ansible/
 - Update the host file to include the IP addresses of the VM's you want to run the playbooks for. Also make sure the host name matches the "hosts" in the playbook files, in this case the ELK machine's IP is under "[elk]" host, hence the playbooks for this machine target "hosts: elk".
-- Run the playbook. The installation can by accessing the targeted VM through SSH, run `curl localhost:(port of the service installed)`, or `http://[your.VM.External.IP]:port`, for example: Kibana's installation can be checked by running `curl localhost:5601/app/kibana` from the ELK vm, or by going to a web browser and typing `http://[your.ELK-VM.External.IP]:5601/app/kibana` adding the IP of the ELK machine to the URL. 
+- Run the playbook. The installation can be verified by accessing the targeted VM through SSH, run `curl localhost:(port of the service installed)`, or `http://[your.VM.External.IP]:port`, for example: Kibana's installation can be checked by running `curl localhost:5601/app/kibana` from the ELK vm, or by going to a web browser and typing `http://[your.ELK-VM.External.IP]:5601/app/kibana` adding the IP of the ELK machine to the URL. 
 
 The playbooks and configuration files in this repo can be downloaded by copying the files `raw` format URL and running:
 
